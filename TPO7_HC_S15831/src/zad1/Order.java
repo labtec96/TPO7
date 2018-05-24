@@ -1,17 +1,16 @@
 package zad1;
 
-public class Order 
+public class Order
 {
 	String clientId;
-	String productName;
-	int productId;
+	Product product;
 	double amount;
 	int accountNumber;
-	public Order(String clientId, String productName, int productId, double amount,int accountNumber)
+
+	public Order(String clientId, Product product, double amount, int accountNumber)
 	{
 		this.clientId = clientId;
-		this.productName = productName;
-		this.productId = productId;
+		this.product = product;
 		this.amount = amount;
 		this.accountNumber = accountNumber;
 	}
