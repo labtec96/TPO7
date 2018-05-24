@@ -1,18 +1,21 @@
 package zad1;
 
+import java.rmi.RemoteException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
 
-public class Bank
+import javax.rmi.PortableRemoteObject;
+
+public class Bank  extends PortableRemoteObject implements BankInterface
 {
 	Random r = new Random(); 
 	HashMap<Client, List<Bill>> clientBill;
 	String[] tabAdvertisement = {"thre for one, two for one"};
 
-	public Bank()
+	public Bank() throws RemoteException
 	{
 		clientBill = new HashMap<Client, List<Bill>>();
 	}

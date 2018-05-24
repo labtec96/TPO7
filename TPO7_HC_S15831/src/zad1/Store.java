@@ -1,11 +1,14 @@
 package zad1;
 
+import java.rmi.RemoteException;
 import java.util.HashMap;
 
-public class Store
+import javax.rmi.PortableRemoteObject;
+
+public class Store  extends PortableRemoteObject implements StoreInterface
 {
 	HashMap<Product, Double> mapProductQuantity;
-	public Store()
+	public Store() throws RemoteException
 	{
 		mapProductQuantity.put(new Product(1, "kiwi"), 40.0);
 		mapProductQuantity.put(new Product(2, "banana"), 40.0);
@@ -17,4 +20,9 @@ public class Store
 	{
 		return null;
 	}
+	public HashMap<Product, Double> askingForProduct()
+	{
+		return mapProductQuantity;
+	}
+
 }
