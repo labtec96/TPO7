@@ -1,8 +1,12 @@
-package zad1;
+package Store;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 import java.util.HashMap;
+
+import zad1.Bill;
+import zad1.Order;
+import zad1.Product;
 
 public interface StoreInterface extends Remote
 {

@@ -1,6 +1,6 @@
-package zad1;
+package Bank;
 
-public class Main
+public class MainBank
 {
 
 	public static void main(String[] args)

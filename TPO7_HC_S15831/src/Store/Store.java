@@ -1,9 +1,13 @@
-package zad1;
+package Store;
 
 import java.rmi.RemoteException;
 import java.util.HashMap;
 
 import javax.rmi.PortableRemoteObject;
+
+import zad1.Bill;
+import zad1.Order;
+import zad1.Product;
 
 public class Store  extends PortableRemoteObject implements StoreInterface
 {
