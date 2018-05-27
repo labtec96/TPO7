@@ -8,6 +8,8 @@ import java.util.List;
 import java.util.Random;
 import java.util.concurrent.atomic.AtomicInteger;
 
+import javax.naming.Context;
+import javax.naming.InitialContext;
 import javax.rmi.PortableRemoteObject;
 
 import Client.Client;
@@ -22,6 +24,7 @@ public class Bank  extends PortableRemoteObject implements BankInterface
 	public Bank() throws RemoteException
 	{
 		clientBill = new HashMap<Client, List<Bill>>();
+		
 	}	
 	
 	public String registerClient(Client client) throws RemoteException
